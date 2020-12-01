@@ -1,7 +1,12 @@
 import {IsNotEmpty, IsString} from "class-validator";
 
-export default class CreateImageDto {
+class CreateImageDto {
   @IsString()
   @IsNotEmpty()
   imageUrl: string;
+
+  @IsNotEmpty()
+  image: string;
 }
+
+export default CreateImageDto;

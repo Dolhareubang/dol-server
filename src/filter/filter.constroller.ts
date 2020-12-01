@@ -2,13 +2,18 @@ import {Controller, Get, HttpCode} from "@nestjs/common";
 import FilterService from "./filter.service";
 
 @Controller("api/filter")
-export default class FilterController {
-	// eslint-disable-next-line no-useless-constructor
-	constructor(private readonly filterService: FilterService) {}
+class FilterController {
+  filterService: FilterService;
+
+  constructor(filterService: FilterService) {
+  	this.filterService = filterService;
+  }
 
   @Get("/")
   @HttpCode(200)
-	getFilter(): string {
-		return this.filterService.getFilter();
-	}
+  getFilter(): string {
+  	return this.filterService.getFilter();
+  }
 }
+
+export default FilterController;

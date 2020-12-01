@@ -4,4 +4,6 @@ import FilterModule from "./filter/filter.mudule";
 @Module({
 	imports: [FilterModule],
 })
-export default class AppModule {}
+
+class AppModule {}
+export default AppModule;

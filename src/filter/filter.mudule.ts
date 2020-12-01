@@ -6,4 +6,6 @@ import FilterService from "./filter.service";
 	controllers: [FilterController],
 	providers: [FilterService],
 })
-export default class FilterModule {}
+class FilterModule {
+}
+export default FilterModule;
